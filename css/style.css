@@ -5,9 +5,32 @@ body{
     margin: 0%;
 }
 
+/* Variabler av färger som ska användas på hemsidan skrivs ner här*/
+:colors{
+    --family_guy_blue: #1e90ff;
+}
+/*Användning:
+    h2{
+        color: var(--family_guy_blue);
+    }
+*/
+
+/*Format variabler för attributes av boxar*/
+:format{
+
+}
+
 nav{
     background-color: blue;
     right: 0px;
+}
+
+noscript-popup {
+    display:block;
+    position:static !important;
+    top: 50%;
+    left: 50%;
+    background-color: white;
 }
 
 h1{
