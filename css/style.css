@@ -5,8 +5,10 @@ body{
     margin: 0%;
 }
 
-/* Variabler av färger som ska användas på hemsidan skrivs ner här*/
+/* Root*/
+/* Can not be used with scoped queries*/
 :root{
+    /*Färger*/
     --peter-griffin-skin1: #B88B82;
     --peter-griffin-skin2: #FDB2A5;
     --peter-griffin-shirt: #F7F7F7;
@@ -60,6 +62,8 @@ body{
     --family-guy-general-blue2: #298DBE;
     --family-guy-turn-turkos: #3CAC9A;
     --family-guy-general-purple1: #D97B9D;
+
+    /*Styling*/
 }
 
 
