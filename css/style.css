@@ -5,12 +5,37 @@ body{
     margin: 0%;
 }
 
+/* Variabler av färger som ska användas på hemsidan skrivs ner här*/
+:colors{
+    --family_guy_blue: #1e90ff;
+}
+/*Användning:
+    h2{
+        color: var(--family_guy_blue);
+    }
+*/
+
+/*Format variabler för attributes av boxar*/
+:format{
+    border-radius: 2%;
+}
+
+
 nav{
     background-color: blue;
     right: 0px;
 }
 
+noscript-popup {
+    display:block;
+    position:static !important;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+}
+
 h1{
+    position: relative;
     padding: 0%;
     margin: 0 auto;
     text-align: center;
@@ -22,17 +47,17 @@ h1{
 }
 
 article{
-    width: 50%;
+    position: relative;
+    width: 40%;
     height: 60%;
-    left: 50%;
-    background-color: rgb(46, 67, 130);
+    margin-left: 5%;
+    background-color: rgb(223, 228, 243);
 }
 button{
     position: sticky;
     top: 0;
     font-size: large;
     padding: 2%;
-    
 }
 
 #sida1{
