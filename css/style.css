@@ -6,19 +6,62 @@ body{
 }
 
 /* Variabler av färger som ska användas på hemsidan skrivs ner här*/
-:colors{
-    --family_guy_blue: #1e90ff;
-}
-/*Användning:
-    h2{
-        color: var(--family_guy_blue);
-    }
-*/
+:root{
+    --peter-griffin-skin1: #B88B82;
+    --peter-griffin-skin2: #FDB2A5;
+    --peter-griffin-shirt: #F7F7F7;
+    --peter-griffin-pants1: #28622F;
+    --peter-griffin-pants2: #384A2B;
+    --peter-griffin-shoes1: #4B2B1A;
+    --peter-griffin-shoes2: #4F281C;
 
-/*Format variabler för attributes av boxar*/
-:format{
+    --lois-griffin-hair1: #F2784D;
+    --lois-griffin-hair2: #F7A376;
+    --lois-griffin-hair3: #F8784E;
+    --lois-griffin-skin: #FFCB9E;
+    --lois-griffin-shirt1: #5CC2AB;
+    --lois-griffin-shirt2: #A7BC9C;
+    --lois-griffin-pants1: #C8AE8C;
+    --lois-griffin-pants2:#E2BF96;
 
+    --meg-griffin-hat1: #CD2E7F;
+    --meg-griffin-hat2: #AC3556;
+    --meg-griffin-hair: #853E24;
+    --meg-griffin-skin: #FDC99D;
+    --meg-griffin-shirt: #CD2E7F;
+    --meg-griffin-pants: #3973B1;
+    --meg-griffin-shoes1: #6B6474;
+    --meg-griffin-shoes2: #9BA3AC;
+
+    --chris-griffin-cap1:#F89D26;
+    --chris-griffin-cap2: #22272C;
+    --chris-griffin-hair: #FDF697;
+    --chris-griffin-shirt1: #5972B5;
+    --chris-griffin-shirt2: #545F81;
+    --chris-griffin-pants: #3E4044;
+    --chris-griffin-shoes1: #6B3338;
+    --chris-griffin-shoes2: #FFFFFF;
+
+    --stewie-griffin-skin: #FEE2C9;
+    --stewie-griffin-shirt1: #FEF34C;
+    --stewie-griffin-shirt2: #EDFA55;
+    --stewie-griffin-backpack: #719AD0;
+    --stewie-griffin-shoes: #BBC2CF;
+
+    --brian-griffin-fur: #FFFFFF;
+    --brian-griffin-collar: #EE1830;
+    --brain-griffin-collar-medialion: #E5F64A;
+    --brain-griffin-nose: #000000;
+
+    --family-guy-general-yellow1:#F4DB66;
+    --family-guy-general-yellow2:#E4B443;
+    --family-guy-general-yellow3: #E0A13E;
+    --family-guy-general-blue1: #79C9F0;
+    --family-guy-general-blue2: #298DBE;
+    --family-guy-turn-turkos: #3CAC9A;
+    --family-guy-general-purple1: #D97B9D;
 }
+
 
 nav{
     background-color: blue;
