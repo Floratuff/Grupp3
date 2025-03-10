@@ -56,13 +56,16 @@ article{
 button{
     position: sticky;
     top: 0;
+    margin-bottom: 33.33333;
     font-size: large;
     padding: 2%;
+    height: 8.33333%;
 }
 
 #sida1{
     margin: 0%;
-    height: 33.333%
+    padding:0%;
+    height: 25%
 }
 
 #sida2{
