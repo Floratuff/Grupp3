@@ -68,7 +68,70 @@ button{
     height: 33.333%
 }
 
-#sida3{
+#sida3 {
     background-color: rgb(42, 165, 61);
-    height: 33.333%
+    width: 100%;
+    height: 100vh; 
+    margin: 10px;
+    display:flex;
+   
+}
+
+.banner {
+    background-color: aqua;
+    width: 15%;
+    height: 80%;
+    padding: 2%;
+    text-align: center;
+}
+
+#banner2 {
+    background-image:none;
+}
+
+#family_guy_video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 60%;
+    background-color: red;
+}
+
+#video {
+    width: 560px;
+    height: 315px;
+    background-color: green;
+}
+
+#video_button {
+    margin-top: 10px;
+    width: 30%;
+}
+
+#picture {
+    margin-top: 20px;
+    height: 10%;
+    width: 10%;
+    height: 300px;
+    background-color: blue;
+    background-image: url('../Images/Sida3/ranul.png');
+}
+
+#comments {
+    margin-top: 20px;
+    width: 80%;
+}
+
+#banner1 {
+}
+
+
+footer{
+    display:none;
+    flex-direction: column;
+    background-color: purple;
+    width: 100%; 
+    height: 10%;
 }

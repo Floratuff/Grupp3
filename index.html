@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="JS/video.js"></script>
 </head>
 <body>
     
     <!--Ser om javascript är på eller inte-->
     <noscript>
         <dialog id="noscript-popup">
-            <p>Javascript is disabled, close to continue</p>
-            <button onclick="this.parentElement.close();">Close</button>
+
         </dialog>
     </noscript>
 
@@ -23,31 +22,30 @@
     <div id = "sida2">
         sida 
     </div>
-
     <div id = "sida3">
+
+        <div class="banner" id="banner1">Loius</div>
+
         <div id = family_guy_video>
-            <iframe>
+            <iframe id="video">
                 src="youtube_placeholder"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
-            <button type="button" onlick="alert('testing')">New video</button>
-        <div> 
+            <button type="button" id="video_button">New video</button>
 
-        <div class="banner">
-            <div id="banner1">Loius</div>
-            <div id="banner2">Stewie</div>
+            <div id="comments">
+                <picture id="picture"> 
+                    <img src="../Grupp3/Images/Sida3/ranul.png" alt="profile_stockimage">
+                </picture>
+                <textarea id="comments" id="comments" style = "font-family: sans-serif;font-size:1,2em">
+                    Comment section
+                </textarea>
+                <input type="comment" value="Submit">
+            </div>
         </div>
 
-        <div id="comments">
-            <picture> 
-                <img src="profile_stockimage.jpg" alt="profile_stockimage">
-            </picture>
-            <textarea id="comments" id="comments" style = "font-family: sans-serif;font-size:1,2em">
-                Comment section
-            </textarea>
-            <input type="comment" value="Submit">
-        </div>
+        <div class="banner" id="banner2">Stewie</div>
 
         <footer> 
             <div id="about">About</div>
@@ -55,7 +53,6 @@
             <div id="contact">Contact</div>	
             <div id="funny">Funny</div>
         </footer>
-
     </div>
     <!-- <h1>
     </h1>
