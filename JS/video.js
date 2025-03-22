@@ -8,6 +8,10 @@ const youtube_links = [
     "https://www.youtube.com/watch?v=2Auy-0qEJ7A",
 ];
 
+const youtube_links_shorts = [
+    
+];
+
 //Clear localstorage with command
 document.addEventListener('keydown', async function(evt){
     evt.stopImmediatePropagation()
@@ -52,6 +56,21 @@ function getNextVideo() {
     }
     shuffleArray(unwatchedVideos);
     return unwatchedVideos[0]; 
+}
+
+//Youtube api functionality will be for the future me
+if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+    console.error("YouTube API is not loaded correctly.");
+} else {
+    console.log("YouTube API is loaded successfully.");
+}
+
+//Get to next video when video is over
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED) {
+        console.log("Video has ended.");
+        changeVideoSource();  
+    }
 }
 
 function extractVideoId(url) {

@@ -1,137 +1,271 @@
 body{
     width: 100vw;
     height: 300vh;
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Variabler av färger som ska användas på hemsidan skrivs ner här*/
-:colors{
+:root{
     --family_guy_blue: #1e90ff;
-}
-
-/*Användning:
-    h2{
-        color: var(--family_guy_blue);
-    }
-*/
-
-
-/*Format variabler för attributes av boxar*/
-:format{
-
 }
 
 nav{
     right: 0px;
-    background-color: colors(--family_guy_blue)
+    background-color: var(--family_guy_blue);
 }
 
 noscript-popup {
-    display:none;
-    position:static !important;
+    display: none;
+    position: static !important;
     top: 50%;
     left: 50%;
     background-color: white;
 }
 
 h1{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     width: 100%;
     height: 7%;
     background-color: aqua;
 }
 
 article{
-    padding: 0%;
+    padding: 0;
     width: 50%;
     height: 25%;
     background-color: rgb(46, 67, 130);
 }
+
 button{
-    position: sticky;
-    font-size: large;
-    padding: 2%;
-    top: 0;
-    bottom: 0%;
+    font-size: medium;
+    padding: 1%;
+    margin-top: 10px;
     left: 5%;
 }
 
 #sida1{
     background-color: brown;
-    height: 33.333%
+    height: 33.333%;
+    width: 100%;
 }
 
 #sida2{
     background-color: rgb(207, 183, 47);
-    height: 33.333%
+    height: 33.333%;
+    width: 100%;
 }
 
 #sida3 {
-    background-color: rgb(42, 165, 61);
+    background-color: rgba(128, 128, 128, 0.5);
     width: 100%;
     height: 100vh; 
-    margin: 10px;
-    display:flex;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_wrapper {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .banner {
-    background-color: aqua;
     width: 15%;
-    height: 80%;
-    padding: 2%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-}
-
-#banner2 {
-    background-image:none;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    border-radius:5px;
 }
 
 #family_guy_video {
     display: flex;
+    border: 1px solid gray;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90%;
-    width: 60%;
-    background-color: red;
+    height: 100%;
+    width: 68%;
+    background-color: cyan;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    border-radius: 20px;
 }
 
 #video {
     width: 560px;
     height: 315px;
-    background-color: green;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+#video:hover {
+    transform: scale(1.05) !important;
+    border-radius: 5%;
 }
 
 #video_button {
-    margin-top: 10px;
-    width: 30%;
+    margin-top: 5px;
+    width: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
 }
 
-#picture {
-    margin-top: 20px;
-    height: 10%;
-    width: 10%;
-    height: 300px;
-    background-color: blue;
-    background-image: url('../Images/Sida3/ranul.png');
+#video_button:hover {
+    box-shadow: 25px 25px 40px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    transform: scale(1.1);
 }
 
 #comments {
-    margin-top: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 80%;
+    margin: 20px auto;
 }
+
+#comments:hover {
+    transform: scale(1.05);
+}
+
+#picture {
+    height: 80px;
+    width: 80px;
+    border-radius: 20%;
+    margin-right: 15px;
+    background-image: url("../Images/Sida3/ranul.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+#comment_section {
+    text-align:left;
+    flex-grow: 1;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+#submit {
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select:none;
+}
+
+#submit:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
 
 #banner1 {
+    background-image: url("../Images/Sida3/stewie.png");
+    background-size: cover;
+}
+
+#banner2 {
+    background-image: url("../Images/Sida3/lois.png");
+    background-size: cover;
+}
+
+footer{
+    background-color: rgba(128, 128, 128, 0.5);
+    display: flex;
+    flex-wrap:wrap;
+    text-align: center;
+    justify-content: center;
+    width: 100%; 
+    height: 10vh;
+    padding: 10px;
+}
+
+footer > * {
+    background-color: purple;
+    font-size: 1.2em;
+    text-align:center;
+    cursor: pointer;
+    width: 23%;
+    height: 10vh;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+    margin-right:5px;
+    margin-right:5px;
+    text-decoration: none !important;
+    color:inherit;
+}
+
+/*Hoover descriptions*/
+
+#about:hover {
+    content: "Hovering hover about";
+    transform: scale(1.1) !important;
 }
 
 
-footer{
-    display:none;
-    flex-direction: column;
-    background-color: purple;
-    width: 100%; 
-    height: 10%;
+#social_media:hover {
+    transform: scale(1.1) !important;
+}
+
+#contact:hover {
+    transform: scale(1.1) !important;
+}
+
+#funny:hover {
+    transform: scale(1.1) !important;
+}
+
+/* Get rid of banners */
+@media screen and (max-width: 760px){
+    .banner {
+        display:none;
+    }
+    #family_guy_video {
+        width: 100%;
+        height: 80%;
+        background-color: cyan;
+    }
+}
+
+/* Funny shorts */
+@media screen and (max-width: 600px) {
+    #video {
+        width: 1080px;
+        height: 1920px;
+        background-color:black;
+    }
 }

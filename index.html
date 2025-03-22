@@ -6,66 +6,50 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="JS/video.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
-    
     <!--Ser om javascript är på eller inte-->
     <noscript>
-        <dialog id="noscript-popup">
-
-        </dialog>
+        <dialog id="noscript-popup"></dialog>
     </noscript>
 
-    <div id = "sida1">
+    <div id="sida1">
         sida 1!
     </div>
-    <div id = "sida2">
+    <div id="sida2">
         sida 
     </div>
-    <div id = "sida3">
 
-        <div class="banner" id="banner1">Loius</div>
-
-        <div id = family_guy_video>
-            <iframe id="video">
-                src="youtube_placeholder"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-            <button type="button" id="video_button">New video</button>
-
-            <div id="comments">
-                <picture id="picture"> 
-                    <img src="../Grupp3/Images/Sida3/ranul.png" alt="profile_stockimage">
-                </picture>
-                <textarea id="comments" id="comments" style = "font-family: sans-serif;font-size:1,2em">
-                    Comment section
-                </textarea>
-                <input type="comment" value="Submit">
+    <div id="sida3">
+        <div id="main_wrapper">
+            <div class="banner" id="banner1" alt="Right banner"></div>
+            <div id="family_guy_video">
+                <iframe id="video"
+                    src="youtube_placeholder"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <button type="button" id="video_button">New video</button>
+                <div id="comments">
+                    <div id="picture" alt="Profile picture"> 
+                        <img src="../Grupp3/Images/Sida3/ranul.png">
+                    </div>
+                    <textarea id="comment_section" style="font-family: sans-serif; font-size:1.2em;">
+                        Comment
+                    </textarea alt="Comment section">
+                    <input type="comment" value="Submit" id="submit" alt="Comment submit button">
+                </div>
             </div>
+            <div class="banner" id="banner2" alt="Left banner"></div>
         </div>
-
-        <div class="banner" id="banner2">Stewie</div>
-
-        <footer> 
-            <div id="about">About</div>
-            <div id="social_media">Social Media</div>
-            <div id="contact">Contact</div>	
-            <div id="funny">Funny</div>
-        </footer>
     </div>
-    <!-- <h1>
-    </h1>
-    <article>
-    </article>
-    <button>
-        WATCH FAMILY GUY!
-    </button>
-    <nav>
-        
-        meny
 
-
-    </nav> -->
+    <footer> 
+        <a href="https://en.wikipedia.org/wiki/Family_Guy" id="about" alt="About link">About</a>
+        <a href="https://x.com/familyguyonfox" id="social_media" alt="Our social media">Social Media</a>
+        <a href="https://www.disneyplus.com/sv-se/browse/entity-3c3c0f8b-7366-4d15-88ab-18050285978e"id="contact" alt="Contact information">Contact</a>
+        <a href="https://www.reddit.com/r/familyguy/comments/13uyz18/hands_down_your_favourite_funniest_moment_from/?rdt=33220" id="funny" alt="Some more funny things">Funny</a>
+    </footer>
 </body>
 </html>
