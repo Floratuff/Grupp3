@@ -19,6 +19,7 @@ body{
 /*Format variabler för attributes av boxar*/
 :format{
     border-radius: 2%;
+}
 
 /* Root*/
 /* Can not be used with scoped queries*/
