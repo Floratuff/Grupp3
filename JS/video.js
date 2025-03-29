@@ -6,11 +6,20 @@ const youtube_links = [
     "https://www.youtube.com/watch?v=tvOkF8cEsdQ",
     "https://www.youtube.com/watch?v=M5IYugY8pjE",
     "https://www.youtube.com/watch?v=2Auy-0qEJ7A",
+    "https://www.youtube.com/watch?v=WRRC-Iw_OPg",
 ];
 
 const youtube_links_shorts = [
-    
+    "https://www.youtube.com/shorts/0xMXVeMQshE",
+    "https://www.youtube.com/shorts/z1gRn-u-mU8",
+    "https://www.youtube.com/shorts/CVrmL3wIyNk",
 ];
+
+//See if video is currently is shorts mode/mobile mode
+if(window.screen.width <= 400){
+    console.log("Shorts mode");
+    youtube_links = youtube_links_shorts;
+}
 
 //Clear localstorage with command
 document.addEventListener('keydown', async function(evt){

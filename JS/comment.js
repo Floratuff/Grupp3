@@ -1,26 +1,34 @@
 //Javascript file to handle comment section
+console.log("Comments java works");
 
-//Remove text when user selects the comment section bar
-document.getElementById('comment_section').addEventListener('focus', function(event) {
-    console.log("Selected comment section");
-    event.target.value = '';
-}, false);
+function getCurrentComment(){
+    return document.getElementById('comment_section').value;
+}
 
-
-//Submit text when user hits enter 
-document.getElementById('comment_section').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter' && !event.shiftKey) {
-        SubmitComment();
-    }
-}, false);
-
-//Submit button
-document.getElementById('submit').addEventListener('click', function(event) {
-    console.log("Submitting comment");
-    SubmitComment();
+document.getElementById('comments').addEventListener('submit', function(event) {
+    event.preventDefault();
+    console.log(event);
 });
 
-//Submit comment when user presses enter or submit 
-function SubmitComment(){
+document.addEventListener('keydown', function(event) {
+    if(event.key == "Enter"){
+        console.log("Enter key has been presssed");
+    }
+});
 
+document.getElementById('comment_section').addEventListener('focus', function(event) {
+    console.log("Focused on comment section");
+});
+
+//Create random comment
+function CreateComment(){
+
+}
+function SubmitComment(Comment){
+    localStorage.setItem("comment", Comment);
+}
+
+//Display comment when page loads
+function DisplayComment(){
+    document.getElementById('comment_section').value = localStorage.getItem("comment");
 }

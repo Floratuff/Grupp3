@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="JS/video.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
@@ -23,7 +22,7 @@
 
     <div id="sida3">
         <div id="main_wrapper">
-            <div class="banner" id="banner1" alt="Right banner"></div>
+            <div class="banner" id="banner1"></div>
             <div id="family_guy_video">
                 <iframe id="video"
                     src="youtube_placeholder"
@@ -31,25 +30,30 @@
                     allowfullscreen>
                 </iframe>
                 <button type="button" id="video_button">New video</button>
-                <div id="comments">
-                    <div id="picture" alt="Profile picture"> 
-                        <img src="../Grupp3/Images/Sida3/ranul.png">
+                <form id="comments">
+                    <div id="picture"> 
+                        <img src="../Images/Sida3/ranul.png" alt="Image profile picture">
                     </div>
-                    <textarea id="comment_section" style="font-family: sans-serif; font-size:1.2em;">
-                        Comment
-                    </textarea alt="Comment section">
-                    <input type="comment" value="Submit" id="submit" alt="Comment submit button">
-                </div>
+                    <input title="Comment section" type="text" id="comment_section" style="font-family: sans-serif; font-size:1.2em;" placeholder="Write a comment..."></input>
+                    <textarea id="public_comments">Placeholder comment</textarea>
+                    <button id="submit">Submit</button>
+                </form>
             </div>
-            <div class="banner" id="banner2" alt="Left banner"></div>
+            <div class="banner" id="banner2">
+            </div>
         </div>
     </div>
 
     <footer> 
-        <a href="https://en.wikipedia.org/wiki/Family_Guy" id="about" alt="About link">About</a>
-        <a href="https://x.com/familyguyonfox" id="social_media" alt="Our social media">Social Media</a>
-        <a href="https://www.disneyplus.com/sv-se/browse/entity-3c3c0f8b-7366-4d15-88ab-18050285978e"id="contact" alt="Contact information">Contact</a>
-        <a href="https://www.reddit.com/r/familyguy/comments/13uyz18/hands_down_your_favourite_funniest_moment_from/?rdt=33220" id="funny" alt="Some more funny things">Funny</a>
+        <a href="https://en.wikipedia.org/wiki/Family_Guy" id="about" title="About us">About</a>
+        <a href="https://x.com/familyguyonfox" id="social_media" title="Socials">Socials</a>
+        <a href="https://www.disneyplus.com/sv-se/browse/entity-3c3c0f8b-7366-4d15-88ab-18050285978e" id="contact" title="Contact">Contact</a>
+        <a href="https://www.reddit.com/r/familyguy/comments/13uyz18/hands_down_your_favourite_funniest_moment_from/?rdt=33220" id="funny" title="Funny" >Funny</a>
     </footer>
+    <script src="JS/video.js"></script>
+    <script src="JS/comment.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/devices.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 </html>
