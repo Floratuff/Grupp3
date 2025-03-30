@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Family Guy Funny Moments</title>
+    <meta name="description" content="Website for family guy funny moments"> 
+    <meta name ="keywords" content="Family Guy, Funny Moments, Funny Moments, Funny Moments">
+    <meta name="author" content="Flora, Martin, Abdi">
+    <meta name="robots" content="index,follow">
+
+    <meta property="og:site_name" content="Family Guy Funny Moments">
+    <meta property="og:title" content="Family Guy Funny Moments">
+    <meta property="og:description" content="Website for family guy funny moments">
+    <meta property="og:type" content="website">
+
+    <!-- SEO END -->
+
     <link rel="stylesheet" href="css/style.css">
     <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
-    <!--Ser om javascript är på eller inte-->
-    <noscript>
-        <dialog id="noscript-popup"></dialog>
-    </noscript>
+    <!--Fixade noscript-->
+    <div id="noscript-alert">Javascript is disabled!</div>
 
     <div id="sida1">
         sida 1!
@@ -34,7 +46,7 @@
                     <div id="picture"> 
                         <img src="../Images/Sida3/ranul.png" alt="Image profile picture">
                     </div>
-                    <input title="Comment section" type="text" id="comment_section" style="font-family: sans-serif; font-size:1.2em;" placeholder="Write a comment..."></input>
+                    <input title="Comment section" type="text" id="comment_section" style="font-family: sans-serif; font-size:1.2em;" placeholder="Write a comment..."> 
                     <textarea id="public_comments">Placeholder comment</textarea>
                     <button id="submit">Submit</button>
                 </form>
@@ -50,10 +62,9 @@
         <a href="https://www.disneyplus.com/sv-se/browse/entity-3c3c0f8b-7366-4d15-88ab-18050285978e" id="contact" title="Contact">Contact</a>
         <a href="https://www.reddit.com/r/familyguy/comments/13uyz18/hands_down_your_favourite_funniest_moment_from/?rdt=33220" id="funny" title="Funny" >Funny</a>
     </footer>
+    <script src="JS/main.js"></script>
     <script src="JS/video.js"></script>
     <script src="JS/comment.js"></script>
-    <script src="JS/script.js"></script>
     <script src="JS/devices.js"></script>
-    <script src="JS/main.js"></script>
 </body>
 </html>

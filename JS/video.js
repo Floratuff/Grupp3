@@ -1,6 +1,6 @@
-console.log("JavaScript works");
+console.log("JavaScript video works");
 
-const youtube_links = [
+let youtube_links = [
     "https://www.youtube.com/watch?v=sZN5yJqDaYI&t=2s",
     "https://www.youtube.com/watch?v=rdV9VTV1Bk8",
     "https://www.youtube.com/watch?v=tvOkF8cEsdQ",
@@ -15,20 +15,19 @@ const youtube_links_shorts = [
     "https://www.youtube.com/shorts/CVrmL3wIyNk",
 ];
 
-//See if video is currently is shorts mode/mobile mode
-if(window.screen.width <= 400){
+// Check if video should be in shorts mode
+if (window.screen.width <= 400) {
     console.log("Shorts mode");
-    youtube_links = youtube_links_shorts;
+    youtube_links = [...youtube_links_shorts]; // Create a copy instead of reassigning
 }
 
-//Clear localstorage with command
-document.addEventListener('keydown', async function(evt){
-    evt.stopImmediatePropagation()
-    if(evt.code === "KeyC" && evt.ctrlKey){
+// Clear localStorage with Ctrl + C
+document.addEventListener("keydown", function (evt) {
+    if (evt.code === "KeyC" && evt.ctrlKey) {
         localStorage.clear();
-        console.log("Clear localstorage");
+        console.log("LocalStorage cleared");
     }
-})
+});
 
 function getWatchedVideos() {
     let watchedVideos = localStorage.getItem("watchedVideos");
@@ -45,7 +44,7 @@ function saveClip(videoUrl) {
 
 function getUnwatchedVideos() {
     let watchedVideos = getWatchedVideos();
-    return youtube_links.filter(video => !watchedVideos.includes(video));
+    return youtube_links.filter((video) => !watchedVideos.includes(video));
 }
 
 function shuffleArray(array) {
@@ -64,26 +63,25 @@ function getNextVideo() {
         return null;
     }
     shuffleArray(unwatchedVideos);
-    return unwatchedVideos[0]; 
+    return unwatchedVideos[0];
 }
 
-//Youtube api functionality will be for the future me
-if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+// Ensure YouTube API is loaded
+if (typeof YT === "undefined" || typeof YT.Player === "undefined") {
     console.error("YouTube API is not loaded correctly.");
 } else {
     console.log("YouTube API is loaded successfully.");
 }
 
-//Get to next video when video is over
 function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED) {
+    if (event.data === YT.PlayerState.ENDED) {
         console.log("Video has ended.");
-        changeVideoSource();  
+        changeVideoSource();
     }
 }
 
 function extractVideoId(url) {
-    let match = url.match(/v=([^&]+)/);
+    let match = url.match(/(?:v=|\/shorts\/|youtu\.be\/)([^&?/]+)/);
     return match ? match[1] : null;
 }
 
@@ -104,7 +102,7 @@ function changeVideoSource() {
     if (videoFrame) {
         videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
         console.log("Video changed to:", nextVideo);
-        saveClip(nextVideo); 
+        saveClip(nextVideo);
     } else {
         console.error("No <iframe> element with id='video' found!");
     }
