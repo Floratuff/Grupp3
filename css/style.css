@@ -139,7 +139,6 @@ button{
     margin-bottom: 33.33333;
     font-size: large;
     padding: 2%;
-    display: none;
 }
 
 #sida1{
@@ -278,7 +277,7 @@ img{
     display:none;   
 }
 
-/*Vet inte varför submit button inte fungerar*/
+/*Vet inte submit button*/
 #submit {
     width: 100px;
     height: 40px;
