@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Family Guy Funny Moments</title>
+    <meta name="description" content="Website for family guy funny moments"> 
+    <meta name ="keywords" content="Family Guy, Funny Moments, Funny Moments, Funny Moments">
+    <meta name="author" content="Flora, Martin, Abdi">
+    <meta name="robots" content="index,follow">
+
+    <meta property="og:site_name" content="Family Guy Funny Moments">
+    <meta property="og:title" content="Family Guy Funny Moments">
+    <meta property="og:description" content="Website for family guy funny moments">
+    <meta property="og:type" content="website">
+
+    <!-- SEO END -->
+
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
-    
-    <!--Ser om javascript är på eller inte-->
-    <noscript>
-        <dialog id="noscript-popup">
-            <p>Javascript is disabled, close to continue</p>
-            <button onclick="this.parentElement.close();">Close</button>
-        </dialog>
-    </noscript>
+    <!--Fixade noscript-->
+    <div lang="en" id="noscript-alert">Javascript is disabled!</div>
 
-    <div id = "sida1">
+  <div id = "sida1">
 
         <h1>
             <img src="images/Family_Guy_television_set.svg.png" alt="Family guy tv logo.">FAMILY GUY FUNNY MOMENTS
@@ -40,47 +48,43 @@
         </button>
     </div>
 
-    <div id = "sida2">
-
-        sida 2 
-    </div>
-    
-
-    <div id = "sida3">
-        <div id = family_guy_video>
-            <iframe>
-                src="youtube_placeholder"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-            <button type="button" onlick="alert('testing')">New video</button>
-        <div> 
-
-        <div class="banner">
-            <div id="banner1">Loius</div>
-            <div id="banner2">Stewie</div>
-        </div>
-
-        <div id="comments">
-            <picture> 
-                <img src="profile_stockimage.jpg" alt="profile_stockimage">
-            </picture>
-            <textarea id="comments" id="comments" style = "font-family: sans-serif;font-size:1,2em">
-                Comment section
-            </textarea>
-            <input type="comment" value="Submit">
-        </div>
-
-        <footer> 
-            <div id="about">About</div>
-            <div id="social_media">Social Media</div>
-            <div id="contact">Contact</div>	
-            <div id="funny">Funny</div>
-        </footer>
-
+    <div id="sida2">
+        sida 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="JS/watchNowButton.js"></script>
+    <div id="sida3">
+        <div id="main_wrapper">
+            <div class="banner" id="banner1"></div>
+            <div id="family_guy_video">
+                <iframe id="video"
+                    src="youtube_placeholder"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                <button lang="en" type="button" id="video_button">New video</button>
+                <form id="comments">
+                    <div id="picture"> 
+                        <img src="../Images/Sida3/ranul.png" alt="Image profile picture">
+                    </div>
+                    <input lang="en" title="Comment section" type="text" id="comment_section" style="font-family: sans-serif; font-size:1.2em;" placeholder="Write a comment..."> 
+                    <textarea lang="en" id="public_comments">Placeholder comment</textarea>
+                    <button lang="en" id="submit">Submit</button>
+                </form>
+            </div>
+            <div class="banner" id="banner2">
+            </div>
+        </div>
+    </div>
+
+    <footer> 
+        <a href="https://en.wikipedia.org/wiki/Family_Guy" lang="en" id="about" title="About us">About</a>
+        <a href="https://x.com/familyguyonfox" lang="en" id="social_media" title="Socials">Socials</a>
+        <a href="https://www.disneyplus.com/sv-se/browse/entity-3c3c0f8b-7366-4d15-88ab-18050285978e" lang="en" id="contact" title="Contact">Contact</a>
+        <a href="https://www.reddit.com/r/familyguy/comments/13uyz18/hands_down_your_favourite_funniest_moment_from/?rdt=33220" lang="en" id="funny" title="Funny" >Funny</a>
+    </footer>
+    <script src="JS/main.js"></script>
+    <script src="JS/video.js"></script>
+    <script src="JS/comment.js"></script>
+    <script src="JS/devices.js"></script>
 </body>
 </html>

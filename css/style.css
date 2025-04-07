@@ -1,28 +1,23 @@
 body{
     width: 100%;
     height: 300vh;
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-/* Variabler av färger som ska användas på hemsidan skrivs ner här*/
-:colors{
-    --family_guy_blue: #1e90ff;
-}
-/*Användning:
-    h2{
-        color: var(--family_guy_blue);
-    }
-*/
-
-/*Format variabler för attributes av boxar*/
-:format{
-    border-radius: 2%;
+#noscript-alert {
+    display:block;
+    background-color:yellow;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-size:50px;
+    font-weight: bold;
 }
 
-/* Root*/
-/* Can not be used with scoped queries*/
 :root{
     /*Färger*/
     --peter-griffin-skin1: #B88B82;
@@ -83,15 +78,14 @@ body{
 
 }
 
-
 nav{
-    background-color: var(--family-guy-general-yellow1);
     right: 0px;
+    background-color: var(--family_guy_blue);
 }
 
 noscript-popup {
-    display:block;
-    position:static !important;
+    display: none;
+    position: static !important;
     top: 50%;
     left: 50%;
     background-color: white;
@@ -145,7 +139,6 @@ button{
     margin-bottom: 33.33333;
     font-size: large;
     padding: 2%;
-    display: none;
 }
 
 #sida1{
@@ -156,10 +149,308 @@ button{
 
 #sida2{
     background-color: rgb(207, 183, 47);
-    height: 33.333%
+    height: 33.333%;
+    width: 100%;
 }
 
-#sida3{
-    background-color: rgb(42, 165, 61);
-    height: 33.333%
+#sida3 {
+    background-color: white;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_wrapper {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.banner {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    border-radius:5px;
+    position:relative;
+}
+
+#family_guy_video {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 68%;
+    background-color: #F7F7FF;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+#video {
+    width: 560px;
+    height: 315px;
+    background-color: #9199B8;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+#video:hover {
+    transform: scale(1.05) !important;
+    border-radius: 5%;
+}
+
+#video_button {
+    margin-top: 5px;
+    width: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+#video_button:hover {
+    box-shadow: 25px 25px 40px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    transform: scale(1.1);
+}
+
+#comments {
+    background-color: #C1CEE7;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+}
+
+#comments:hover {
+    transform: scale(1.05);
+}
+
+#picture {
+    height: 80px;
+    width: 80px;
+    border-radius: 20%;
+    margin-right: 15px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+img{
+    height:80px;
+    width: 80px;
+}
+
+#comment_section {
+    text-align:left;
+    flex-grow: 1;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+/*Pulbic comments to view*/
+#public_comments{
+    display:none;   
+}
+
+/*Vet inte submit button*/
+#submit {
+    width: 100px;
+    height: 40px;
+    display:block;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select:none;
+}
+
+#submit:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #0056b3;
+}
+
+#banner1 {
+    background-image: url("../Images/Sida3/Lois_Griffin.png");
+    object-fit: contain;
+}
+
+#banner2 {
+    background-image: url("../Images/Sida3/Brian_Griffin.png");
+    object-fit: cover;
+}
+
+footer{
+    background-color: white;
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 10vh;
+    margin: 0;
+}
+
+footer > * {
+    background-color: #5C6B93;
+    font-size: 1.2em;
+    text-align:center;
+    cursor: pointer;
+    width: 20%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+    margin: 10px;
+    text-decoration: none !important;
+    color:inherit;
+}
+
+/*Hoover descriptions*/
+
+#about:hover {
+    content: "Hovering hover about";
+    transform: scale(1.1) !important;
+}
+
+
+#social_media:hover {
+    transform: scale(1.1) !important;
+}
+
+#contact:hover {
+    transform: scale(1.1) !important;
+}
+
+#funny:hover {
+    transform: scale(1.1) !important;
+}
+
+/* Get rid of banners */
+@media screen and (max-width: 760px){
+    .banner {
+        display:none;
+    }
+    #family_guy_video {
+        width: 100%;
+        height: 100%;
+    }
+    #submit{
+        display:none;
+    }
+
+    .banner{
+        display: none;
+    }
+    #video{
+        width: 80%;
+        height: 50%; 
+    }     
+}
+
+/* Fix buttons */
+@media screen and (max-width: 500px){ 
+    #comment_section{
+        width: 50%;
+        font-size: 1em;
+    }
+
+    img{
+        margin-bottom: 20px;
+    }
+
+    footer > * {    
+        width:40%;
+    }
+}
+
+/* Funny shorts */
+@media screen and (max-width:370px) { 
+    #comments{
+        display:none;
+    }
+
+    #video_button{
+        display:none;
+    }
+
+    #family_guy_video{
+        width: 100%;
+        height: 100%;
+        background-color: cyan;
+    }
+
+    #video {
+        height: 80%;
+        background-color:black;
+    }
+
+    /** 
+    * make funny id box underneath all the other ids in footer 
+    */
+    footer{
+        width:100%;
+        height:10%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    footer > * {
+        width:20%;
+        height: 35%;
+    }   
+    #funny{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 340px){
+    footer {
+        font-size: 80%;
+    }
+}
+
+/* Make the elements in the footer stack up on each other after 260 px width*/
+@media screen and (max-width: 260px){
+   footer {
+       flex-direction: row;
+       flex-wrap: wrap;
+   }
+   footer > * {
+       width: 80%; 
+       height: 20%;
+   } 
+}
+
+/* remove footer elements at this point */
+@media screen and (max-width: 200px){
+    footer {
+        display: none;
+    }
 }
